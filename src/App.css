@@ -1,0 +1,174 @@
+a, a:active, a:hover, a:visited {
+  color: navy;
+  text-decoration: none;
+  margin-left: 5px; }
+
+a:active, a:hover {
+  color: white; }
+
+.tile-0 {
+  background-color: orange; }
+  .tile-0:hover {
+    background-color: orange; }
+
+.tile-1 {
+  background-color: rgba(255, 165, 0, 0.944444); }
+  .tile-1:hover {
+    background-color: #ffa501; }
+
+.tile-2 {
+  background-color: rgba(255, 165, 0, 0.888889); }
+  .tile-2:hover {
+    background-color: #ffa501; }
+
+.tile-3 {
+  background-color: rgba(255, 165, 0, 0.833333); }
+  .tile-3:hover {
+    background-color: #ffa602; }
+
+.tile-4 {
+  background-color: rgba(255, 165, 0, 0.777778); }
+  .tile-4:hover {
+    background-color: #ffa602; }
+
+.tile-5 {
+  background-color: rgba(255, 165, 0, 0.722222); }
+  .tile-5:hover {
+    background-color: #ffa603; }
+
+.tile-6 {
+  background-color: rgba(255, 165, 0, 0.666667); }
+  .tile-6:hover {
+    background-color: #ffa603; }
+
+.tile-7 {
+  background-color: rgba(255, 165, 0, 0.611111); }
+  .tile-7:hover {
+    background-color: #ffa604; }
+
+.tile-8 {
+  background-color: rgba(255, 165, 0, 0.555556); }
+  .tile-8:hover {
+    background-color: #ffa604; }
+
+.tile-9 {
+  background-color: rgba(255, 165, 0, 0.5); }
+  .tile-9:hover {
+    background-color: #ffa705; }
+
+.itemList div {
+  display: inline-block; }
+
+.itemApp {
+  background-image: linear-gradient(135deg, white, yellow);
+  height: 100vh; }
+
+.itemList {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 50%;
+  max-height: 500px;
+  overflow-y: auto; }
+
+.listItem, .buttonSaveForm {
+  list-style: none;
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 0px 7px 7px 0px;
+  max-width: 350px;
+  color: darkslategrey;
+  font-size: 18px;
+  font-family: courier;
+  margin: 5px;
+  text-align: left; }
+
+.deleteButton {
+  display: inline-block;
+  padding: 2px 6px 2px 2px;
+  margin-left: 5px;
+  border: 1px solid white;
+  text-align: left; }
+  .deleteButton:active {
+    background-color: #fba200; }
+  .deleteButton:hover {
+    box-shadow: 0px 0px 5px white;
+    background-color: #fca300; }
+
+a.deleteItem {
+  color: red; }
+
+a.editItem {
+  text-decoration: underline; }
+
+.buttonAddForm {
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 7px 0px 0px 7px;
+  max-width: 350px;
+  color: darkslategrey;
+  font-size: 20px;
+  font-family: courier;
+  margin-left: 25%;
+  text-align: right; }
+  .buttonAddForm:active {
+    background-color: #fba200; }
+  .buttonAddForm:hover {
+    box-shadow: 0px 0px 5px white;
+    background-color: #fca300; }
+
+.buttonSaveForm {
+  border: 2px solid lime;
+  font-size: 20px;
+  margin-left: 25%; }
+  .buttonSaveForm:active {
+    background-color: #00fb00; }
+  .buttonSaveForm:hover {
+    box-shadow: 0px 0px 5px white;
+    background-color: #00fc00; }
+
+.requestDeleteDialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: darkslategrey;
+  opacity: 0.9;
+  z-index: 5; }
+
+.question {
+  display: block;
+  font-size: 25px;
+  z-index: 6; }
+
+.controlButtonContainer {
+  padding: 10px;
+  width: 50vw;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  z-index: 6; }
+
+.controlButton, .yes, .no {
+  padding: 10px;
+  border: 2px solid orange;
+  width: 80px;
+  color: darkslategrey;
+  font-size: 25px;
+  font-family: courier;
+  display: inline-block;
+  margin-left: 10px;
+  z-index: 7;
+  cursor: pointer; }
+  .controlButton:hover, .yes:hover, .no:hover {
+    opacity: 0.8; }
+
+.yes {
+  border-radius: 7px;
+  text-align: center;
+  background-color: lime; }
+
+.no {
+  border-radius: 7px;
+  text-align: center;
+  background-color: white; }

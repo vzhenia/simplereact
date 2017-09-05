@@ -1,0 +1,154 @@
+$baseColor: yellow;
+$secondColor: orange;
+$textColor: darkslategrey;
+$whiteColor: white;
+$greenColor: lime;
+$maxTileWidth: 350px;
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+#{$a-tags} {
+  color: navy;
+  text-decoration: none;
+  margin-left: 5px;
+}
+#{$a-tags-hover} {
+  color: $whiteColor;
+}
+
+@for $i from 0 through 9 {
+  .tile-#{$i} {
+    background-color: transparentize($secondColor, 0.5*$i/9);
+
+    &:hover {
+      background-color: lighten($secondColor, 0.9*$i/9);
+    }
+  }
+}
+.itemList div {
+  display: inline-block;
+}
+.itemApp {
+  background-image: linear-gradient(135deg, white, $baseColor);
+  height: 100vh;
+}
+.itemList {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 50%;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.listItem {
+  list-style: none;
+  padding: 10px;
+  border: 2px solid $secondColor;
+  border-radius: 0px 7px 7px 0px;
+  max-width: $maxTileWidth;
+  color: $textColor;
+  font-size: 18px;
+  font-family: courier;
+  margin: 5px;
+  text-align: left;
+}
+.deleteButton{
+  display: inline-block;
+  padding: 2px 6px 2px 2px;
+  margin-left: 5px;
+  border: 1px solid $whiteColor;
+  text-align:left;
+  &:active {
+    background-color: darken($secondColor, 0.8);
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px $whiteColor;
+    background-color: darken($secondColor, 0.5);
+  }
+}
+a.deleteItem {
+  color: red;
+}
+a.editItem {
+  text-decoration: underline;
+}
+.buttonAddForm {
+  padding: 10px;
+  border: 2px solid $secondColor;
+  border-radius: 7px 0px 0px 7px;
+  max-width: $maxTileWidth;
+  color: $textColor;
+  font-size: 20px;
+  font-family: courier;
+  margin-left: 25%;
+  text-align: right;
+  &:active {
+    background-color: darken($secondColor, 0.8);
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px $whiteColor;
+    background-color: darken($secondColor, 0.6);
+  }
+}
+.buttonSaveForm {
+  @extend .listItem;
+  border: 2px solid $greenColor;
+  font-size: 20px;
+  margin-left: 25%;
+  &:active {
+    background-color: darken($greenColor, 0.8);
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px $whiteColor;
+    background-color: darken($greenColor, 0.6);
+  }
+}
+.requestDeleteDialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $textColor;
+  opacity: 0.9;
+  z-index: 5;
+}
+.question {
+  display: block;
+  font-size: 25px;
+  z-index: 6;
+}
+.controlButtonContainer {
+  padding: 10px;
+  width: 50vw;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  z-index: 6;
+}
+.controlButton {
+  padding: 10px;
+  border: 2px solid $secondColor;
+  width: 80px;
+  color: $textColor;
+  font-size: 25px;
+  font-family: courier;
+  display: inline-block;
+  margin-left: 10px;
+  z-index: 7;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.yes {
+  @extend .controlButton;
+  border-radius: 7px;
+  text-align: center;
+  background-color: $greenColor;
+}
+.no {
+  @extend .controlButton;
+  border-radius: 7px;
+  text-align: center;
+  background-color: $whiteColor;
+}
